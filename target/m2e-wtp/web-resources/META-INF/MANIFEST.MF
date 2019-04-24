@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: dsm_stp_AuthenticationManager
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: cognavchandra
+Implementation-Vendor-Id: dsm.johnlewis.stp.authenticationmanager
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/dsm_stp_AuthenticationManager
+Created-By: Maven Integration for Eclipse
+
