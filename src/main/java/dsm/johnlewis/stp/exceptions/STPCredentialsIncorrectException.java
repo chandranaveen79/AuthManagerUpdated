@@ -1,6 +1,6 @@
 package dsm.johnlewis.stp.exceptions;
 
-public class STPCredentialsIncorrectException extends ADUsersException{
+public class STPCredentialsIncorrectException extends Exception{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -10,6 +10,4 @@ public class STPCredentialsIncorrectException extends ADUsersException{
 	public STPCredentialsIncorrectException(String message){
 		super(message);
 	}
-	
-
 }

@@ -1,6 +1,6 @@
 package dsm.johnlewis.stp.exceptions;
 
-public class STPAuthenticationManagerSystemException extends ADUsersException {
+public class STPAuthenticationManagerSystemException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -11,6 +11,4 @@ public class STPAuthenticationManagerSystemException extends ADUsersException {
 	public STPAuthenticationManagerSystemException(String message){
 		super(message);
 	}
-
-
 }
