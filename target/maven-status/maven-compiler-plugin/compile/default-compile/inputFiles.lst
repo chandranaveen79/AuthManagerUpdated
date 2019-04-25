@@ -1,8 +1,10 @@
+C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\service\QueryService.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\exceptions\STPDSSecuritySystemException.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\exceptions\STPNewCredentialsNotAcceptedException.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\exceptions\STPCredentialsExpiredException.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\AuthApplication.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\manager\ISTPAuthentication.java
+C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\controller\SecurityController.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\factory\STPDSAuthenticationManagerFactory.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\exceptions\STPAuthenticationManagerSystemException.java
 C:\AuthenticationManager\src\main\java\dsm\johnlewis\stp\controller\AuthenticationController.java

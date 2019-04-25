@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.filter.AndFilter;
 import org.springframework.ldap.filter.EqualsFilter;
+import org.springframework.stereotype.Service;
 
 import dsm.johnlewis.stp.exceptions.STPAuthenticationManagerSystemException;
 import dsm.johnlewis.stp.exceptions.STPCredentialsExpiredException;
@@ -13,6 +14,7 @@ import dsm.johnlewis.stp.exceptions.STPDSSecuritySystemException;
 import dsm.johnlewis.stp.exceptions.STPDSSecurityUserIDNotFound;
 import dsm.johnlewis.stp.factory.STPDSSecurityFactory;
 
+@Service
 public class STPAuthentication implements ISTPAuthentication {
 
 	@Autowired
@@ -29,9 +31,11 @@ public class STPAuthentication implements ISTPAuthentication {
 
 		try {
 			if (securityFactory.securityManager().findDSSecurityUserId(userid) != null) {
-				AndFilter filter = new AndFilter();
-				filter.and(new EqualsFilter("sAMAccountName", userid));
-				return ldapTemplate.authenticate(ldapQueryBase, filter.encode(), password);
+				if (!securityFactory.securityManager().checkIfPasswordExpired(userid)) {
+					AndFilter filter = new AndFilter();
+					filter.and(new EqualsFilter("sAMAccountName", userid));
+					return ldapTemplate.authenticate(ldapQueryBase, filter.encode(), password);
+				}
 			}
 		} catch (STPDSSecuritySystemException | STPDSSecurityUserIDNotFound e) {
 			throw new STPAuthenticationManagerSystemException();
